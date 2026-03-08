@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<title>Smart Tourist Room Stay Booking System</title>
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+<header>
+
+<h1>Tourist Booking System</h1>
+
+<div id="userArea"></div>
+
+</header>
+
+
+<div class="container" id="authBox">
+
+<h2>Register</h2>
+
+<input type="text" id="regName" placeholder="Full Name">
+<input type="text" id="regContact" placeholder="Gmail or Mobile">
+<input type="password" id="regPassword" placeholder="Password">
+
+<button onclick="register()">Register</button>
+
+<hr>
+
+<h2>Login</h2>
+
+<input type="text" id="loginContact" placeholder="Gmail or Mobile">
+<input type="password" id="loginPassword" placeholder="Password">
+
+<button onclick="login()">Login</button>
+
+</div>
+
+
+<div id="mainArea" style="display:none;">
+
+<input type="text" id="search" placeholder="Search place" onkeyup="searchPlaces()">
+
+<div class="places">
+
+<div class="place">
+
+<img src="https://images.unsplash.com/photo-1622308644420-b20142dc993c">
+
+<h3>Ooty</h3>
+
+<p>₹3000</p>
+
+<button onclick="book('Ooty',3000)">Book Now</button>
+
+</div>
+
+
+<div class="place">
+
+<img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e">
+
+<h3>Goa</h3>
+
+<p>₹6000</p>
+
+<button onclick="book('Goa',6000)">Book Now</button>
+
+</div>
+
+
+<div class="place">
+
+<img src="https://images.unsplash.com/photo-1593693397690-362cb9666fc2">
+
+<h3>Kerala</h3>
+
+<p>₹5000</p>
+
+<button onclick="book('Kerala',5000)">Book Now</button>
+
+</div>
+
+
+<div class="place">
+
+<img src="https://images.unsplash.com/photo-1609947017136-9daf32a5eb16">
+
+<h3>Manali</h3>
+
+<p>₹8000</p>
+
+<button onclick="book('Manali',8000)">Book Now</button>
+
+</div>
+
+</div>
+
+</div>
+
+
+<div class="container" id="roomsBox" style="display:none;">
+
+<h2 id="roomTitle"></h2>
+
+<div id="roomsList"></div>
+
+</div>
+
+
+<div class="container" id="bookingBox" style="display:none;">
+
+<h2 id="placeName"></h2>
+
+<p id="placePrice"></p>
+
+<input type="number" id="persons" placeholder="Persons">
+
+<button onclick="showPayment()">Proceed Payment</button>
+
+</div>
+
+
+<div class="container" id="paymentBox" style="display:none;">
+
+<h2>Select Payment</h2>
+
+<button onclick="pay('GPay')">GPay</button>
+
+<button onclick="pay('PhonePe')">PhonePe</button>
+
+<button onclick="pay('UPI')">UPI</button>
+
+<button onclick="pay('Bank Transfer')">Bank Transfer</button>
+
+</div>
+
+
+<div class="container" id="ticketBox" style="display:none;">
+
+<h2>Ticket Generated</h2>
+
+<p id="ticketUser"></p>
+
+<p id="ticketPlace"></p>
+
+<p id="ticketPersons"></p>
+
+<p id="ticketAmount"></p>
+
+<p id="ticketPayment"></p>
+
+<p id="ticketId"></p>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
